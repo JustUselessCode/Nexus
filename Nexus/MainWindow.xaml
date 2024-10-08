@@ -6,14 +6,17 @@
         xmlns:local="clr-namespace:Nexus"
         mc:Ignorable="d"
         Title="Nexus"
-        Icon="\Assets\Nexus_Icon.ico">
+        ResizeMode="NoResize"
+        Height="720"
+        Width="1280"
+        Icon="E:\Dev\C#\Nexus\Nexus\Assets\Nexus_Icon.ico">
 
     <Window.Resources>
-        <Style TargetType="Window">
+        <!--Style>
             <Setter Property="Background" Value="#282c34"/>
-            <Setter Property="Height" Value="720"/>
-            <Setter Property="Width" Value="1280"/>
-        </Style>
+            <Setter Property="Height" Value="1080"/>
+            <Setter Property="Width" Value="1920"/>
+        </Style-->
 
         <Style TargetType="Grid">
             <Setter Property="Background" Value="#282c34"/>
@@ -28,10 +31,13 @@
             <Setter Property="Height" Value="30"/>
             <Setter Property="FontSize" Value="16"/>
         </Style>
+
     </Window.Resources>
 
 
-    <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="1144,634,0,0" VerticalAlignment="Top"/>
+    <Grid Width="1280" Height="720" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Button Content="Send" HorizontalAlignment="Left" Margin="1144,634,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="648" Height="24"/>
+        <Label Content="URL" Foreground="GreenYellow" Margin="270,6,0,0" VerticalAlignment="Top" Height="28" Width="41" HorizontalAlignment="Left" FontSize="16"/>
     </Grid>
 </Window>
