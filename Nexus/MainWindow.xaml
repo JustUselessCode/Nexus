@@ -7,9 +7,10 @@
         mc:Ignorable="d"
         Title="Nexus"
         ResizeMode="NoResize"
-        Height="720"
-        Width="1280"
-        Icon="E:\Dev\C#\Nexus\Nexus\Assets\Nexus_Icon.ico">
+        Height="Auto"
+        Width="Auto"
+        SizeToContent="WidthAndHeight"
+        Icon="E:\Dev\C#\Nexus\Nexus\Assets\Nexus-N-Icon.ico">
 
     <Window.Resources>
         <!--Style>
@@ -32,12 +33,23 @@
             <Setter Property="FontSize" Value="16"/>
         </Style>
 
+        <Style TargetType="TextBox">
+            <Setter Property="Background" Value="#2e323a"/>
+            <Setter Property="Foreground" Value="GreenYellow"/>
+        </Style>
+
     </Window.Resources>
 
 
     <Grid Width="1280" Height="720" HorizontalAlignment="Center" VerticalAlignment="Center">
-        <Button Content="Send" HorizontalAlignment="Left" Margin="1144,634,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="648" Height="24"/>
-        <Label Content="URL" Foreground="GreenYellow" Margin="270,6,0,0" VerticalAlignment="Top" Height="28" Width="41" HorizontalAlignment="Left" FontSize="16"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="23*"/>
+            <ColumnDefinition Width="105*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="SendRequestButton" Content="Send" HorizontalAlignment="Left" Margin="833,7,0,0" VerticalAlignment="Top" Grid.Column="1" Height="30" Width="100"/>
+        <TextBox x:Name="MainUrlInpuTextBox" HorizontalAlignment="Left" Margin="212,7,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="600" Height="30" Grid.Column="1"/>
+        <Label Content="URL" Foreground="GreenYellow" Margin="147,6,0,0" VerticalAlignment="Top" Height="28" Width="41" HorizontalAlignment="Left" FontSize="16" Grid.Column="1"/>
+        <Button x:Name="Settings" Grid.Column="1" Content="⚙" HorizontalAlignment="Left" Margin="995,7,0,0" VerticalAlignment="Top" Width="45" FontSize="25" Height="45" BorderBrush="#FF282C34" Background="#FF282C34"/>
+        <Rectangle HorizontalAlignment="Left" Height="710" Stroke="#2e323a" VerticalAlignment="Top" Width="220"/>
     </Grid>
 </Window>
